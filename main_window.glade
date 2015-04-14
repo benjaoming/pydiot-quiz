@@ -98,9 +98,13 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFixed" id="fixed1">
+          <object class="GtkEventBox" id="gamearea">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <signal name="button-press-event" handler="on_gamearea_button_press_event" swapped="no"/>
+            <child>
+              <placeholder/>
+            </child>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -124,6 +128,7 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
+                    <signal name="button-press-event" handler="record_team1" swapped="no"/>
                   </object>
                   <packing>
                     <property name="expand">True</property>
